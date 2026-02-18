@@ -1,3 +1,4 @@
+package JavaLogicCourseChapter02;
 import java.util.Scanner;
 
 public class BMIcalculator {
