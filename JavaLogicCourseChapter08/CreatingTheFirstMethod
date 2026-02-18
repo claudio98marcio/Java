@@ -1,0 +1,15 @@
+package LogicCourseChapter08;
+
+public class CreatingTheFirstMethod {
+	public static void main(String[] args) {
+		System.out.println("Welcome to the my fisrt contact to methods. Now bellow we'll see this");
+		
+		repeat();
+		repeat();
+		repeat();
+		
+	}
+	static void repeat() {
+		System.out.println("repeat, repeat, repeat...");
+	}
+}

@@ -1,0 +1,65 @@
+package LogicCourseChapter08;
+
+import java.util.Scanner;
+
+public class Exercice02 {
+			public static void main(String[] args) {
+			Scanner scanner = new Scanner(System.in);
+			
+			printTraces();
+			
+			String[] courses = new String[] {"Java EE", "Spring", "Java OO Advanced"};
+			
+			System.out.println("Choose the course bellow: ");
+			
+			iterateAndDisplayStringVectorPosition(courses);
+
+			System.out.print("The choosen course is: ");
+			Integer choosenCourse = scanner.nextInt();
+			
+			Boolean validPosition = choosenCourse >= 0 && choosenCourse < courses.length; 
+			
+			errorMessage(validPosition);
+			
+			printTraces();
+			
+			String[] paymentMethod = new String[] {"Card", "Cash"};
+			
+			System.out.println("Choose the payment method bellow: ");
+			
+			iterateAndDisplayStringVectorPosition(paymentMethod);
+
+			System.out.print("Your choosen payment method is: ");
+			Integer positionPaymentMethod = scanner.nextInt();
+			
+			validPosition = positionPaymentMethod >= 0 && positionPaymentMethod < paymentMethod.length; 
+			
+			errorMessage(validPosition);
+			
+			String userCourse = courses[choosenCourse];
+			String userPayment = paymentMethod[positionPaymentMethod];
+			
+			printTraces();
+			
+			System.out.println("The choosen course is " + userCourse + " and the payment method will be " + userPayment);
+			
+			scanner.close();
+		}
+		
+		static void printTraces() {
+			System.out.println("----------------------------------------------");
+		}
+		
+		static void errorMessage (Boolean valid) {
+			if (!valid) {
+			System.err.println("Invalid position!");
+			System.exit(1);
+			}
+		}
+		
+		static void iterateAndDisplayStringVectorPosition (String[] vector) {
+			for(int i = 0; i < vector.length; i++) {
+				System.out.println("[" + i + "] " + vector[i]);
+			}
+		}
+}

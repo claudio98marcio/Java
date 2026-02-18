@@ -1,0 +1,19 @@
+package LogicCourseChapter07;
+
+public class TwoDimensionalVector {
+	public static void main(String[] args) {
+		Double[] invoiceJanuary = new Double[] {1250.0, 1300.0, 1500.0, 1400.0};
+		Double[] invoiceFebruary = new Double[] {1850.0, 300.0, 11500.0, 100.0};
+		Double[][] invoiceAnnual = new Double[][] {invoiceJanuary, invoiceFebruary};
+		
+		for (int x = 0; x < invoiceAnnual.length; x++) {
+			Double[] month = invoiceAnnual[x];
+			System.out.println("Month: " + (x + 1));
+			
+			for (int y = 0; y < month.length; y++) {
+				Double day = month[y];
+				System.out.println("Day " + (y + 1) + ": " + day );
+			}
+		}
+	}
+}

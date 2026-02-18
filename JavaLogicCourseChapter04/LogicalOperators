@@ -1,0 +1,23 @@
+package LogicCourseChapter04;
+
+public class LogicalOperators {
+	public static void main(String[] args) {
+		Boolean userBasketMoreThan100 = false;
+		Boolean promotionalPeriod = true;
+		Boolean buyAnothertime = false;
+		Boolean payWithCash = true;
+		
+//		Boolean applyDiscount = userBasketMoreThan100 && promotionalPeriod;
+//		Boolean applyDiscount = userBasketMoreThan100 || promotionalPeriod;
+//		Boolean applyDiscount = userBasketMoreThan100 && promotionalPeriod && buyAnothertime;
+//		Boolean applyDiscount = userBasketMoreThan100 || promotionalPeriod || buyAnothertime;
+		Boolean applyDiscount = userBasketMoreThan100 && (promotionalPeriod || buyAnothertime) && payWithCash;
+		
+		if (applyDiscount) {
+			System.out.println("Yes Apply");
+		} else {
+			System.out.println("Not Apply");
+		}
+		
+	}
+}

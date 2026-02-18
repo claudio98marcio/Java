@@ -1,0 +1,31 @@
+package LogicCourseChapter04;
+
+import java.util.Scanner;
+
+public class Exercice04 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Welcome to Retirement Elegibility Security Social's System.");
+		
+		System.out.println("Type your Age: ");
+		Integer userAge = scanner.nextInt();
+		
+		System.out.println("Type how much years you contributed: ");
+		Integer contributedAges = scanner.nextInt();
+		
+//		Boolean minimumUserAge = userAge >= 55; 
+//		Boolean minimumUserContributed = contributedAges >= 25;
+//		Boolean canRetire = minimumUserAge && minimumUserContributed;
+		
+		Boolean canRetire = userAge >= 55 && contributedAges >= 25;
+		
+		if (canRetire) {
+			System.out.println("Aproved");
+		} else {
+			System.out.println("Refused");
+		}
+		
+		scanner.close();
+	}
+}

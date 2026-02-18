@@ -1,0 +1,27 @@
+package LogicCourseChapter05;
+
+public class StructureIF {
+
+	public static void main(String[] args) {
+		Double clientLoan = 4000.0;
+		Double accountMoviment = 2000.0;
+		
+		Boolean accountMinimumTime = true;
+		Boolean nameClean = true;
+		
+//		if (((accountMoviment * 2) >= clientLoan) && accountMinimumTime && nameClean) {
+//		}
+//		
+//		HOW COMPLICATED AND DISORGANIZED IS...
+//		
+//		BUT HOW TO DO A ORGANIZED WAY
+
+		Boolean movimentHalfValue = (accountMoviment * 2) >= clientLoan;
+		Boolean applyLoan = movimentHalfValue && nameClean && accountMinimumTime;
+		
+		if (applyLoan) {
+//			NOW I KNOW WHAT MEANS A CONTENT INSIDE IF
+		}
+	}
+
+}

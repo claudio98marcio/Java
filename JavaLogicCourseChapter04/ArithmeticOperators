@@ -1,0 +1,30 @@
+package LogicCourseChapter04;
+
+import java.util.Scanner;
+
+public class ArithimeticOperations {
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		Integer varAdiction = 1+1;
+		System.out.println("Adiction: " + varAdiction);
+		
+		Integer varSubtraction = 10-5;
+		System.out.println("Subtraction: " + varSubtraction);
+		
+		Integer varMultiplication = 2*2;
+		System.out.println("Multiplication: " + varMultiplication);
+		
+		Integer varDivision = 100/10;
+		System.out.println("Division: " + varDivision);
+		
+		Integer varModule = 7%4;
+		System.out.println("Module or Percentual: " + varModule);
+		
+		Integer varExpression = (1+5)*6;
+		System.out.println("Arithmetical Expression works too: " + varExpression);
+		
+		scanner.close();
+	}
+}

@@ -1,0 +1,30 @@
+package LogicCourseChapter05;
+
+import java.util.Scanner;
+
+public class Exercice01 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Type your score to know whether you succedded");
+		
+		System.out.println("Portuguese score: ");
+		Integer userScorePortuguese = scanner.nextInt();
+		
+		System.out.println("Mathematic score: ");
+		Integer userScoreMathematic = scanner.nextInt();
+		
+		Boolean minimumScorePortuguese = userScorePortuguese >= 60;
+		Boolean minimumScoreMathematic = userScoreMathematic >= 60;
+		Boolean minimumGrade = (userScorePortuguese + userScoreMathematic) >= 150;
+		Boolean gradeSucceed = minimumGrade && minimumScoreMathematic && minimumScorePortuguese;
+		
+		if (gradeSucceed) {
+			System.out.println("Congratulations!");
+		} else {
+			System.out.println("You Score is below that the required");
+		}
+		
+		scanner.close();
+	}
+}

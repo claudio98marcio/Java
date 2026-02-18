@@ -1,0 +1,39 @@
+package LogicCourseChapter05;
+
+import java.util.Scanner;
+
+public class Exercice03 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Type the number which is compatible to day of week");
+		System.out.println("1 - SUNDAY  2 - MONDAY  3 - TUESDAY  4 - WEDNESDAY  5 - THURSDAY  6 - FRIDAY  7 - SATURDAY");
+		
+		Integer numberOFday = scanner.nextInt();
+		String dayOFWeek = null;
+		
+		switch (numberOFday) {
+		case 1: dayOFWeek = "Sunday";
+			break;
+		case 2: dayOFWeek = "Monday";
+			break;
+		case 3: dayOFWeek = "Tuesday";
+			break;
+		case 4: dayOFWeek = "Wednesday";
+			break;
+		case 5: dayOFWeek = "Thursday";
+			break;
+		case 6: dayOFWeek = "Friday";
+			break;
+		case 7: dayOFWeek = "Saturday";
+			break;
+		default: 
+			System.err.println("Type a valid day of week");
+			System.exit(1);
+		}
+		
+		System.out.println("Today is: " + dayOFWeek);
+		
+		scanner.close();
+	}
+}

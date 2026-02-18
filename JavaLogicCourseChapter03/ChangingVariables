@@ -1,0 +1,32 @@
+package LogicCourseChapter03;
+
+import java.util.Scanner;
+
+public class ChangingVariablesValue {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("You are the Seller, how much cost a product wich your cliente want to buy? ");
+		Double productValue = scanner.nextDouble();
+		
+		System.out.print("Wich kind of payment the costumer wants? (1 for CASH / 2 for INSTALLMENT) ");
+		Integer kindPayment = scanner.nextInt();
+		
+		Boolean costumerCash = kindPayment.equals(1);
+		
+		Double storeInterest = 0.0;
+		
+		if (costumerCash) {}
+		else {
+			storeInterest = 23.0;
+		}
+		
+		Double valueSurcharges = productValue * storeInterest / 100;
+		Double finalValue = valueSurcharges + productValue;
+		
+		System.out.println("Costumer must pay: " + finalValue);
+		
+		scanner.close();
+		
+}
+}

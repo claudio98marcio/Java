@@ -1,0 +1,57 @@
+package LogicCourseChapter07;
+
+public class Exercice02 {
+	public static void main(String[] args) {
+		Double[] firstWeek = new Double[]{ 1000.0, 1500.0, 1250.0, 2100.0, 1350.0, 970.0, 0.0 };
+		Double[] secondWeek = new Double[]{ 1050.0, 2500.0, 3250.0, 1100.0, 1430.0, 900.0, 0.0 };
+		Double[] thirdWeek = new Double[]{ 1700.0, 1300.0, 1450.0, 2000.0, 1390.0, 800.0, 0.0 };
+		Double[] fourthWeek = new Double[]{ 2100.0, 1600.0, 1850.0, 2100.0, 1220.0, 998.0, 0.0 };
+
+//		Double[][] month = new Double[][] { firstWeek, secondWeek, thirdWeek, fourthWeek };
+			
+		Double totalFirstWeek = 0.0;
+		Double totalSecondWeek = 0.0;
+		Double totalThirdWeek = 0.0;
+		Double totalFourthWeek = 0.0;
+		
+		for (int week01 = 0; week01 < firstWeek.length; week01++) {
+			totalFirstWeek = totalFirstWeek + firstWeek[week01];
+		}
+
+		for (int week02 = 0; week02 < secondWeek.length; week02++) {
+			totalSecondWeek = totalSecondWeek + secondWeek[week02];
+		}
+
+		for (int week03 = 0; week03 < thirdWeek.length; week03++) {
+			totalThirdWeek = totalThirdWeek + thirdWeek[week03];
+		}
+		
+		for (int week04 = 0; week04 < fourthWeek.length; week04++) {
+			totalFourthWeek = totalFourthWeek + fourthWeek[week04];
+		}
+		
+		System.out.println(totalFirstWeek);
+		System.out.println(totalSecondWeek);
+		System.out.println(totalThirdWeek);
+		System.out.println(totalFourthWeek);
+		System.out.println("");
+		
+		Boolean finalTotalFirstWeek = (totalFirstWeek > totalSecondWeek) && (totalFirstWeek > totalThirdWeek)  && (totalFirstWeek > totalFourthWeek);
+		Boolean finalTotalSecondWeek = (totalSecondWeek > totalFirstWeek) && (totalSecondWeek > totalThirdWeek)  && (totalSecondWeek > totalFourthWeek);
+		Boolean finalTotalThirdWeek = (totalThirdWeek > totalFirstWeek) && (totalThirdWeek > totalSecondWeek)  && (totalThirdWeek > totalFourthWeek);
+		Boolean finalTotalFourthWeek = (totalFourthWeek > totalFirstWeek) && (totalFourthWeek > totalSecondWeek)  && (totalFourthWeek > totalThirdWeek);
+				
+		if (finalTotalFirstWeek) {
+			System.out.println("The highest revenue week was a first with a total: " + totalFirstWeek);
+		}		
+		if (finalTotalSecondWeek) {
+			System.out.println("The highest revenue week was a second with a total: " + totalSecondWeek);
+		}		
+		if (finalTotalThirdWeek) {
+			System.out.println("The highest revenue week was a third with a total: " + totalThirdWeek);
+		}		
+		if (finalTotalFourthWeek) {
+			System.out.println("The highest revenue week was a first with a total: " + totalFourthWeek);
+		}		
+	}
+}

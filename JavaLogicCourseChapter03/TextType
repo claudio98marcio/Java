@@ -1,0 +1,17 @@
+package LogicCourseChapter03;
+
+import java.util.Scanner;
+
+public class TextType {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("Please write your first name and press ENTER: ");
+		String varName = scanner.nextLine();
+		
+		System.out.print("Hello " + varName + ("!"));
+		
+		scanner.close();
+	}
+	
+}

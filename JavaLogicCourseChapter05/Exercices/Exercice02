@@ -1,0 +1,34 @@
+package LogicCourseChapter05;
+
+import java.util.Scanner;
+
+public class Exercice02 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Type The three parameters to know whether gain a bonus");
+		
+		System.out.println("Type the Revenue Target");
+		Integer revenueTarget = scanner.nextInt();
+		
+		System.out.println("Type the Actual Revenue");
+		Integer actualRevenue = scanner.nextInt();
+		
+		System.out.println("Type the average Salary");
+		Integer averageSalary = scanner.nextInt();
+		
+		Boolean salaryBonus01 = actualRevenue >= revenueTarget;
+		Boolean salaryBonus02 = actualRevenue >= (revenueTarget * 0.8);
+		
+		if (salaryBonus01) {
+			System.out.println("The paws will be receive: " + (averageSalary * 2));
+		} else if (salaryBonus02) {
+			System.out.println("The paws wil be receive: " + (averageSalary * 1.8));
+		} else {
+			System.out.println("Gotta be kiding me? Back to the work");
+		}
+				
+		
+		scanner.close();
+	}
+}

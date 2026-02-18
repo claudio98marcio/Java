@@ -1,0 +1,36 @@
+package LogicCourseChapter04;
+
+import java.util.Scanner;
+
+public class Exercice03 {
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Welcome to Family Expeses's note. Bellow  you must type how much cost each bill");
+		
+		Double totalExpenses = 0.0; 
+		
+		System.out.println("Type the Electricity bill: ");
+		totalExpenses += scanner.nextDouble();
+		
+		System.out.println("Type the Water bill: ");
+		totalExpenses += scanner.nextDouble();
+		
+		System.out.println("Type the Internet bill: ");
+		totalExpenses += scanner.nextDouble();
+		
+		System.out.println("Type the Scholl/Daycare bill: ");
+		totalExpenses += scanner.nextDouble();
+		
+		System.out.println("Type the Credit Card bill: ");
+		totalExpenses += scanner.nextDouble();
+		
+		System.out.println("Type the Grocery expenses: ");
+		totalExpenses += scanner.nextDouble();
+		
+		System.out.println("The total is: " + totalExpenses);
+		
+		scanner.close();
+	}
+}

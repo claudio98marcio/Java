@@ -1,0 +1,25 @@
+package LogicCourseChapter03;
+
+import java.util.Scanner;
+
+public class BooleanType {
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Welcome to Dibilowas DriverSchool, insert your age to know if you be able to iniciate the studies: ");
+		
+		Integer userAge = scanner.nextInt();
+		
+		Boolean canStart = userAge >= 18;
+		
+		if (canStart) {
+			System.out.println("We're glad to receive you like studant!");
+		} else {
+			System.out.println("Sorry, you don't have minimum age to start the studies");
+		}
+		
+		
+		scanner.close();
+}
+}

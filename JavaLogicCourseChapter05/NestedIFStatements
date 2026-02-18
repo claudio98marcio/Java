@@ -1,0 +1,53 @@
+package LogicCourseChapter05;
+
+import java.util.Scanner;
+
+public class NestedIFStatements {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		Double userWeight = scanner.nextDouble();
+		
+		Boolean lightWeight = (userWeight > 0) && (userWeight <= 60);
+		Boolean mediumWeight = (userWeight > 60) && (userWeight <= 90);
+		Boolean heavyWeight = userWeight > 90;
+
+//		FIRST NOT CONVENTIONAL WAY
+//		if (lightWeight) {
+//			System.out.println("You are light weight fighter.");
+//		}
+//		
+//		if (mediumWeight) {
+//			System.out.println("You are medium weight fighter.");
+//		}
+//		
+//		if (heavyWeight) {
+//			System.out.println("You are heavy weight fighter.");
+//		}
+//		
+////		SECOND NOT CONVENTIONAL WAY
+//		if (lightWeight) {
+//			System.out.println("You are light weight fighter.");
+//		} else {
+//			Boolean mediumWeight = (userWeight > 60) && (userWeight <= 90);
+//		} 	if (mediumWeight) {
+//				System.out.println("You are medium weight fighter.");
+//			} else {
+//				Boolean heavyWeight = userWeight > 90;
+//			}	if (heavyWeight) {
+////				System.out.println("You are heavy weight fighter.");
+//			}
+		
+//		THAT IS THE MVP
+	if (lightWeight) {
+		System.out.println("You are light weight fighter.");
+	} else if (mediumWeight) {
+		System.out.println("You are medium weight fighter.");
+	} else if (heavyWeight) {
+		System.out.println("You are heavy weight fighter.");
+	}
+		
+		
+		scanner.close();
+	}
+}

@@ -1,0 +1,32 @@
+package LogicCourseChapter03;
+
+import java.util.Scanner;
+
+public class Exercice04 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("Please, type how much cost the product: ");
+		Double productPrice = scanner.nextDouble();
+		
+		System.out.print("What quantity will the costumer want to buy? ");
+		Integer productQuantity = scanner.nextInt();
+		
+		Double subtotalPQ = productPrice * productQuantity;
+		
+		Integer discountValue = 0;
+		
+		Boolean applyDiscount = productQuantity >= 10;
+		
+		if (applyDiscount) {
+			discountValue = 10;
+		}
+		
+		Double priceDiscount = subtotalPQ * discountValue / 100;
+		Double finalDiscount = subtotalPQ - priceDiscount;
+		
+		System.out.println("The costumer must pay: " + finalDiscount);
+		
+		scanner.close();
+	}
+}

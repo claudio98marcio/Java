@@ -1,0 +1,67 @@
+package LogicCourseChapter08;
+
+import java.util.Scanner;
+
+public class Exercice01 {
+		public static void main(String[] args) {
+			Scanner scanner = new Scanner(System.in);
+			
+			printTraces();
+			
+			String[] courses = new String[] {"Java EE", "Spring", "Java OO Advanced"};
+			
+			System.out.println("Choose the course bellow: ");
+			
+			for(int i = 0; i < courses.length; i++) {
+				System.out.println("[" + i + "] " + courses[i]);
+			}
+
+			System.out.print("The choosen course is: ");
+			Integer choosenCourse = scanner.nextInt();
+			
+			Boolean validPosition = choosenCourse >= 0 && choosenCourse < courses.length; 
+			
+			if (!validPosition) {
+				errorMessage();
+			}
+			
+			printTraces();
+			
+			String[] paymentMethod = new String[] {"Card", "Cash"};
+			
+			System.out.println("Choose the payment method bellow: ");
+			
+			for(int i = 0; i < paymentMethod.length; i++) {
+				System.out.println("[" + i + "] " + paymentMethod[i]);
+			}
+
+			System.out.print("Your choosen payment method is: ");
+			Integer positionPaymentMethod = scanner.nextInt();
+			
+			validPosition = positionPaymentMethod >= 0 
+					&& positionPaymentMethod < paymentMethod.length; 
+			
+			if (!validPosition) {
+				errorMessage();
+			}
+			
+			String userCourse = courses[choosenCourse];
+			String userPayment = paymentMethod[positionPaymentMethod];
+			
+			printTraces();
+			
+			System.out.println("The choosen course is " + userCourse + " and the payment method will be " + userPayment);
+			
+			scanner.close();
+		}
+		
+		static void printTraces() {
+			System.out.println("----------------------------------------------");
+		}
+		
+		static void errorMessage() {
+			System.err.println("Invalid position!");
+			System.exit(1);
+		}
+
+}

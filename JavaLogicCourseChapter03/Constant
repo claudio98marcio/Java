@@ -1,0 +1,26 @@
+package LogicCourseChapter03;
+
+import java.util.Scanner;
+
+public class Constant {
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		final Integer minimumToGrade = 75;
+		
+		System.out.println("Please, insert your grade: ");
+		
+		Integer userGrade = scanner.nextInt();
+		
+		Boolean gradeOK = userGrade >= minimumToGrade;
+		
+		if (gradeOK) {
+			System.out.println("Congratulations you passed");
+		} else {
+			System.out.println("You won't passed, good studies in next year");
+		}
+		
+		scanner.close();
+	}
+}

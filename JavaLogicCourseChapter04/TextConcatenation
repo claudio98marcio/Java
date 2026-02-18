@@ -1,0 +1,11 @@
+package LogicCourseChapter04;
+
+public class TextConcatenation {
+	public static void main(String[] args) {
+		String varStart = "John ";
+		String varMiddle = "3 ";
+		String varEnd = "16";
+		
+		System.out.println(varStart + varMiddle + varEnd);
+	}
+}

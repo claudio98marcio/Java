@@ -1,0 +1,28 @@
+package LogicCourseChapter04;
+
+public class AssignmentOperators {
+	public static void main(String[] args) {
+	
+		Integer number = 10;
+		
+//		TO COMMENT (//): COMMAND + SHIFT + C;
+		
+//		numberAddiction = number + 4;
+		number += 4;
+		
+//		numberSubtraction = number - 4;
+		number -= 4;
+		
+//		numberMultiplication = number * 4;
+		number *= 4;
+		
+//		numberDivision = number * 4;
+		number /= 4;
+		
+//		numberModule = number % 4;
+		number %= 4;
+		
+		
+		System.out.println(number);
+}
+}

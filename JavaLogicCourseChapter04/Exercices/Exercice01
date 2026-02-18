@@ -1,0 +1,54 @@
+package LogicCourseChapter04;
+
+import java.util.Scanner;
+
+public class Exericice01 {
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Welcome to Claudio's Simple Calculator or CSC");
+		
+		System.out.println("Type the first number: ");
+		Double userFirstNumber = scanner.nextDouble();
+		
+		System.out.println("Choose wich operation you want to calculate: 1 = Addition / 2 = Subtraction / 3 = Multiplication / 4 = Division / 5 = Module or Percentual: ");
+		Integer userChoice = scanner.nextInt();
+		Boolean addictionOperation = userChoice.equals(1);
+		Boolean subtractionOperation = userChoice.equals(2);
+		Boolean multiplicationOperation = userChoice.equals(3);
+		Boolean divisionOperation = userChoice.equals(4);
+		Boolean moduleOperation = userChoice.equals(5);
+		
+		
+		System.out.println("Type the second number: ");
+		Double userSecondNumber = scanner.nextDouble();
+	
+		if (addictionOperation) {
+			Double finalAddictionOperation = userFirstNumber + userSecondNumber;
+			System.out.println("Result is: " + finalAddictionOperation);
+		}
+	
+		if (subtractionOperation) {
+			Double finalSubtractionOperation = userFirstNumber - userSecondNumber;
+			System.out.println("Result is: " + finalSubtractionOperation);
+		}
+		
+		if (multiplicationOperation) {
+			Double finalMultiplicationOperation = userFirstNumber * userSecondNumber;
+			System.out.println("Result is: " + finalMultiplicationOperation);
+		}
+		
+		if (divisionOperation) {
+			Double finalDivisionOperation = userFirstNumber / userSecondNumber;
+			System.out.println("Result is: " + finalDivisionOperation);
+		}
+
+		if (moduleOperation) {
+			Double finalModuleOperation = userFirstNumber % userSecondNumber;
+			System.out.println("Result is: " + finalModuleOperation);
+		}
+	
+		scanner.close();
+	}
+}

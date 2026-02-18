@@ -1,0 +1,26 @@
+package LogicCourseChapter04;
+
+public class RelationalOperators {
+	public static void main(String[] args) {
+		
+		System.out.println("X = 1 AND Y = 2. Let's play with those numbers");
+		
+		Boolean XGreatherThenY = 1 > 2;
+		System.out.println("Is X Greater Than Y? (MUST BE FALSE) " + XGreatherThenY);
+		
+		Boolean XGreatherThenOrEqual = 1 == 2;
+		System.out.println("Is X Grater than or Equal than Y? (MUST BE FALSE) " + XGreatherThenOrEqual);
+		
+		Boolean XLessThenY = 1 < 2;
+		System.out.println("Is X Less Than Y? (MUST BE TRUE) " + XLessThenY);
+		
+		Boolean XLessThenOrEqual = 1 <= 2;
+		System.out.println("Is X Less Than or Equal than Y? (MUST BE TRUE) " + XLessThenOrEqual);
+		
+		Boolean XEqualY = 1 == 2;
+		System.out.println("Is X Equal than Y? (MUST BE FALSE) " + XEqualY);
+		
+		Boolean XDifferentY = 1 != 2;
+		System.out.println("Is X Different than Y (MUST BE TRUE) " + XDifferentY);
+	}
+}

@@ -1,0 +1,12 @@
+package LogicCourseChapter04;
+
+public class IncrementAndDecrementOperators {
+	public static void main(String[] args) {
+	Integer number01 = 10;
+	Integer number02 = ++number01;
+//	Integer number03 = number01++;
+	
+	System.out.println(number01 + (" ") + number02);
+//	System.out.println(number01 + (" ") + number03);
+}
+}

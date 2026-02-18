@@ -1,0 +1,50 @@
+package LogicCourseChapter06;
+
+public class FORloop {
+	public static void main(String[] args) {
+		
+//	EXEMPLE 01
+//	INT = PRIMITIVE OF INTEGER
+//	I = VARIABLE
+//	I++ = FOR EACH LOOP I BE MORE THAN LAST LOOP TO REACH A FIVE LOOPS.
+		
+//	for (int i = 1; i <= 5; i++ ) {
+//		System.out.println(i + " Phrase");
+//	}
+	
+		
+		
+//  EXEMPLE 02
+//	Double[] userBasket = new Double[] { 50.0, 51.0, 52.0};
+//	Double total = 0.0;
+//	for (int i = 0; i < userBasket.length; i++) {
+//		System.out.println("Interation: " + i + ", total: " + total);
+//		total = total + userBasket [i];
+//	}
+//	System.out.println("Total: " + total);
+	
+		
+		
+//	EXEMPLE 03
+//	for (int i = 0; i < 10; i++) {
+//		if (i == 5) {
+//			break;
+//		}
+//		System.out.println("Interation: " + i);		
+//	}
+	
+		
+		
+//	EXEMPLE 04
+	Integer[] product = new Integer[] {100, 255, 300};
+	for (int i = 0; i < product.length; i++) {
+		Integer product01 = product [i];
+		System.out.println("Product ID: " + product01);
+		if (product01.equals(255)) {
+			System.out.println("Product found!");
+			break;
+		}
+	}
+	
+	}
+}

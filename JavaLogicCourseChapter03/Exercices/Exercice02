@@ -1,0 +1,19 @@
+package LogicCourseChapter03;
+
+import java.util.Scanner;
+
+public class Exercice02 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("Hello, please insert your Name and press ENTER: ");
+		String varName = scanner.nextLine();
+		
+		System.out.print("Now, please insert your Surname and press ENTER: ");
+		String varSurname = scanner.nextLine();
+		
+		System.out.println("Welcome sir/mam " + varName + " " + varSurname + " the pleasure is all ours!");
+		
+		scanner.close();
+	}
+}

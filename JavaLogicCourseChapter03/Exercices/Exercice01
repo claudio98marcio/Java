@@ -1,0 +1,18 @@
+package LogicCourseChapter03;
+
+import java.util.Scanner;
+
+public class Exercice01 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("Type the number whose square you want to know: ");
+		Double userNumber = scanner.nextDouble();
+		
+		Double squareNumber = userNumber * userNumber;
+		
+		System.out.print("Here the square of your number: " + squareNumber);
+		
+		scanner.close();
+	}
+}

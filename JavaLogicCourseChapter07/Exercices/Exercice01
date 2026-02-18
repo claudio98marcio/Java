@@ -1,0 +1,41 @@
+package LogicCourseChapter07;
+
+import java.util.Scanner;
+
+public class Exercice01 {
+	public static void main(String[] args) {
+		System.out.println("Welcome to the daily task maneger! Please write your five must important task to store in us service");
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("");
+		System.out.print("Your First task: ");
+		String firstTask = scanner.next();
+
+		System.out.println("");
+		System.out.print("Your Second task: ");
+		String secondTask = scanner.next();
+		
+		System.out.println("");
+		System.out.print("Your Third task: ");
+		String thirdTask = scanner.next();
+		
+		System.out.println("");
+		System.out.print("Your Fourth task: ");
+		String fourthTask = scanner.next();
+		
+		System.out.println("");
+		System.out.print("Your Fifth task: ");
+		String fifthTask = scanner.next();
+		
+		String [] userTasks = new String[] {firstTask, secondTask, thirdTask, fourthTask, fifthTask};
+		System.out.println("");
+		System.out.println("Confirm if whole task is correct");
+		for (int i = 0; i < userTasks.length; i++) {			
+			System.out.println("");
+			System.out.println(i + " - " + userTasks[i]);
+		}
+		
+		scanner.close();
+	}
+}
