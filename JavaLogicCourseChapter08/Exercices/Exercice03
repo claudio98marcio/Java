@@ -1,0 +1,96 @@
+package LogicCourseChapter08;
+
+import java.util.Scanner;
+
+public class Exercice03 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Welcome to prototype Claudio's calculator");
+		
+		traces();
+		
+		String[] operation = new String [] { "ADDICTION", "SUBTRACTION", "MULTIPLICATION", "DIVISION"};
+		allOperations(operation);
+
+		spaceLine();
+		
+		System.out.print("Please choose what operation you want to do: ");	
+		
+		Integer userOperation = scanner.nextInt();
+		
+		traces();
+		
+		System.out.println("The choosen operations is " + operation[userOperation]);
+		
+		traces();
+		
+		System.out.print("Choose the first number: ");
+		Double number00 = scanner.nextDouble();
+		
+		System.out.print("Choose the second number: ");
+		Double number01 = scanner.nextDouble();
+		
+		Double[] numbers = new Double[] {number00, number01};
+		
+		traces();
+		
+		
+		
+		if (userOperation == 0) {
+			operationAddiction(numbers);
+			System.out.println("The result is: " + operationAddiction(numbers));
+		}
+		
+		if (userOperation == 1) {
+			operationSubtraction(numbers);
+			System.out.println("The result is: " + operationSubtraction(numbers));
+		}
+		
+		if (userOperation == 2) {
+			operationMultiplication(numbers);
+			System.out.println("The result is: " + operationMultiplication(numbers));
+		}
+		
+		if (userOperation == 3) {
+			operationDivision(numbers);
+			System.out.println("The result is: " + operationDivision(numbers));
+		}
+		
+		scanner.close();
+	}
+
+	static void traces() {
+		System.out.println("-------------------------------------");
+	}
+	
+	static void spaceLine() {
+		System.out.println("");
+	}
+	
+	static void allOperations(String[] vector) {
+		for (int i = 0; i < vector.length; i++ ) {
+			System.out.println("[" + i + "]" + vector[i]);
+		}
+	}
+	
+	static Double operationAddiction(Double[] number) {
+		Double result = number[0] + number[1];
+		return result;
+	}
+	
+	static Double operationSubtraction(Double[] number) {
+		Double result = number[0] - number[1];
+		return result;
+	}
+	
+	static Double operationMultiplication(Double[] number) {
+		Double result = number[0] * number[1];
+		return result;
+	}
+	
+	static Double operationDivision(Double[] number) {
+		Double result = number[0] / number[1];
+		return result;
+	}
+}	
