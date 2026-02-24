@@ -1,0 +1,39 @@
+package LogicCourseChapter08;
+
+import java.util.Scanner;
+
+public class Exercice04 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Exercice 04, please choose any number to reveal a multiplication table from him: ");
+		Integer userNumber = scanner.nextInt();
+		
+		spaceline();
+		
+		printMultiplicationTable(userNumber);
+		
+		scanner.close();
+	}
+	
+	static void printMultiplicationTable (Integer multiplicand) {
+		printMultiplicationTable(multiplicand, 0);
+	}
+	
+	static void printMultiplicationTable (Integer multiplicand, Integer i) {
+		
+		System.out.println(multiplicand + " x " + i + " = " + operationMultiplication(multiplicand, i) );
+		
+		if (++i <= 10) {
+			printMultiplicationTable(multiplicand, i);
+		}
+	}
+	
+	static Integer operationMultiplication(Integer multiplicand, Integer i) {
+		Integer result = multiplicand * i;
+		return result;
+	}
+	
+	static void spaceline() {
+		System.out.println(" ");
+	}
+}
