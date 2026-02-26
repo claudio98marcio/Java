@@ -1,0 +1,7 @@
+package Exercice01;
+
+public class Product {
+	String name;
+	Integer stockQuantity;
+	static final Integer MINIMUM_STOCK_QUANTITY = 10;
+}

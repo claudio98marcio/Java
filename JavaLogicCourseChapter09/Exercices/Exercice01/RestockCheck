@@ -1,0 +1,60 @@
+package Exercice01;
+
+import java.util.Scanner;
+
+public class RestockingCheck {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		Product product = new Product();
+		
+		product.name = "Pencil";
+		
+		spaceLine();
+		
+		printSameLine("Please inform a real quantity of a " + product.name + ": ");
+		product.stockQuantity = scanner.nextInt();
+		
+		spaceLine();
+		
+		System.out.println("Is necessary restock a " + product.name + "? " + isNecessaryReplaceAProduct(product));
+		
+		spaceLine();
+		
+		necessityOfReplacement(product);
+		
+		scanner.close();
+	}
+	
+	static void printSameLine(String text) {
+		System.out.print(text);
+	}
+	
+	static void spaceLine() {
+		System.out.println("");
+	}
+	
+	static Boolean isNecessaryReplaceAProduct(Product product) {
+		if(product.stockQuantity < product.MINIMUM_STOCK_QUANTITY) {
+			return true;
+		}
+		
+		return false;
+	}
+	
+	static void necessityOfReplacement (Product product) {
+		
+		stockMinimumRequired(product);
+		
+		if(product.stockQuantity <= 10) {
+			System.out.println("Is necessary restock a " + product.name + " with " + stockMinimumRequired(product) + " unity(ies).");
+		} else{
+			System.out.println("This product don't need a replacement.");
+		}
+	}
+	
+	static Integer stockMinimumRequired (Product product) {
+		Integer quantityForFill = 10 - product.stockQuantity;
+		return quantityForFill;
+	}
+	
+}

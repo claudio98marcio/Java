@@ -1,0 +1,16 @@
+package ObjectOrientedProgramming;
+
+public class FirstClass {
+	public static void main(String[] args) {
+		Product product = new Product();
+		product.name = "Smartphone";
+		product.unitaryValue = 800.0;
+		product.quantity = 15;
+		
+		displayStock(product);
+	}
+	
+	static void displayStock (Product product) {
+		System.out.println("In stock we have of product " + product.name + ": " + product.quantity + " quantity(ies).");
+	}
+}
