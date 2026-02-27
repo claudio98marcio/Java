@@ -1,0 +1,31 @@
+package Exercice02;
+
+public class Product {
+	String name;
+	Integer stockQuantity;
+	static final Integer MINIMUM_STOCK_QUANTITY = 10;
+	
+	Boolean isNecessaryReplaceAProduct() {
+		if(stockQuantity < MINIMUM_STOCK_QUANTITY) {
+			return true;
+		}
+		
+		return false;
+	}
+	
+	void necessityOfReplacement() {
+		
+		stockMinimumRequired();
+		
+		if(stockQuantity <= 10) {
+			System.out.println("Is necessary restock a " + name + " with " + stockMinimumRequired() + " unity(ies).");
+		} else{
+			System.out.println("This product don't need a replacement.");
+		}
+	}
+	
+	Integer stockMinimumRequired () {
+		Integer quantityForFill = 10 - stockQuantity;
+		return quantityForFill;
+	}
+}
