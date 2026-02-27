@@ -1,0 +1,20 @@
+package instancemethod;
+
+public class InstaceMethod {
+	public static void main(String[] args) {
+		Client client = new Client();
+		client.firstName = "Sarah";
+		client.lastName = "Valentine";
+		client.phoneNumber = "555000999";
+		client.email = "sarahvalentine@gmail.com";
+		
+//		System.out.println("Client name: " + client.firstName + " " + client.lastName);
+//		System.out.println("Client name: " + receiveFullName(client));
+		System.out.println("Client name: " + client.receiveFullName());
+	}
+	
+//	static String receiveFullName (Client client) {
+//		String fullName = client.firstName + " " + client.lastName;
+//		return fullName;
+//	}
+}

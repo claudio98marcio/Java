@@ -1,0 +1,18 @@
+package instancemethod;
+
+public class Client {
+	String firstName;
+	
+	String lastName;
+	
+	String phoneNumber;
+	
+	String email;
+	
+	String receiveFullName () {
+		
+		String fullName = firstName + " " + lastName;
+		
+		return fullName;
+	}
+}
