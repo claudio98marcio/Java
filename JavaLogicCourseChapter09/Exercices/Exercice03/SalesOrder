@@ -1,0 +1,16 @@
+package Exercice03;
+
+public class SalesOrder {
+	public static void main(String[] args) {
+		Order order = new Order();
+		order.code = "0000001";
+		order.subtotal = 100.0;
+		order.discount = 10;
+//		order.total = 90.0;
+		
+		System.out.println("code of order: " + order.getCode());
+		System.out.println("subtotal of order: " + order.getSubtotal());
+		System.out.println("discount of order: " + order.getDiscount());
+		System.out.println("total of order: " + order.getTotal());
+	}
+}

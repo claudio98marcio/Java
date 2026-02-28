@@ -1,0 +1,37 @@
+package Exercice03;
+
+public class Order {
+	String code;
+	Double subtotal;
+	Integer discount;
+//	Double total;
+
+	String getCode() {
+		return code;
+	}
+
+	Double getSubtotal() {
+		return subtotal;
+	}
+	
+	void setSubtotal(Double subtotal) {
+		this.subtotal = subtotal;
+	}
+	
+	Integer getDiscount() {
+		return discount;
+	}
+	
+	void setDiscount(Integer discount) {
+		this.discount = discount;
+	}
+	
+	Double getTotal() {
+		Double total = subtotal - discount;
+		return total;
+	}
+	
+//	void setTotal(Double total) {
+//		this.total = total;
+//	}
+}
