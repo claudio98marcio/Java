@@ -1,0 +1,32 @@
+package Encapsulation;
+
+public class Client {
+	String firstName;
+	String lastName;
+	
+	String getName() {						// Method to gather a full name
+		return firstName + " " + lastName;
+	}
+	
+	void setName(String name) {				// For each get is necessary set,and here I'm appointing who in String[] are a first name and last name 
+		String[] fullName = name.split(" ");
+		firstName = fullName[0];
+		lastName = fullName[1];
+	}
+	
+	String getFirstName() {
+		return firstName;
+	}
+	
+	void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	
+	String getLastName() {
+		return lastName;
+	}
+	
+	void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+}

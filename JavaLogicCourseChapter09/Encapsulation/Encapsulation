@@ -1,0 +1,12 @@
+package Encapsulation;
+
+public class Encapsulation {
+	public static void main(String[] args) {
+		Client client = new Client();
+		client.setName("Claudio Filho");
+		
+		System.out.println("My first name is: " + client.getFirstName());
+		System.out.println("My last name is: " + client.getLastName());
+		System.out.println("My full name is: " + client.getName());
+	}
+}
