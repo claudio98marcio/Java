@@ -1,0 +1,31 @@
+package ReadingAndWrite;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class WriteInformationIntoTextFiles {
+	public static void main(String[] args) throws IOException {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		ArrayList<String> lines = new ArrayList<String>();
+		
+		System.out.println("Please type what you need to do today");
+		
+		for (int i = 0; i < 5; i++) {
+		System.out.print(i + ") ");
+		String tasks = scanner.nextLine();
+		lines.add(tasks);
+		}
+		
+		Path archive = Paths.get("/Users/claudio98filho/Downloads/Chapter10ReadAndWrite/CH10WriteInformationIntoTextFiles.txt");
+		
+		Files.write(archive, lines);
+		
+		scanner.close();
+	}
+}
