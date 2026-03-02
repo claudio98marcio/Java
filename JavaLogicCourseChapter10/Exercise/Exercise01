@@ -1,0 +1,38 @@
+package Exercice01;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ToDoList {
+	public static void main(String[] args) throws IOException {
+		Scanner scanner = new Scanner(System.in);
+		ArrayList<String> lines = new ArrayList<String>();
+		
+		System.out.println("Welcome to your To Do list, for each time that console ask for new task, will be represent a new line in your to do list. When you want to end the list"
+				+ "type 'x'.");
+		
+		int i = 0;
+		
+		while (i >= 0) {
+			System.out.print("Please type your task - " + i + ") ");
+			i++;
+			String tasks = scanner.nextLine();
+			lines.add(tasks);
+			if ("x".equals(tasks)) {
+				break;
+			}
+			
+		}
+		
+		Path archive = Paths.get("/Users/claudio98filho/Downloads/Chapter10ReadAndWrite/CH10Exercise01");
+		Files.write(archive, lines);
+				
+		scanner.close();
+		
+		System.out.println("End of To Do list, thank you for the pacince.");
+	}
+}
