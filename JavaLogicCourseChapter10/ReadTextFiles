@@ -1,0 +1,21 @@
+package ReadingInformationFromAFile;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+
+public class Reading {
+	public static void main(String[] args) throws IOException {
+		Path archive = Paths.get("/Users/claudio98filho/Downloads/Chapter10ReadAndWrite/CH10Read.txt");
+		
+		List<String> lines = Files.readAllLines(archive);
+		
+		for(int i = 0; i < lines.size(); i++) {
+			String task = lines.get(i);
+			
+			System.out.println("task " + i + ": " + task);
+		}
+	}
+}
